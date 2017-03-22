@@ -156,7 +156,7 @@ def parse_parser(parser, data=None, **kwargs):
         if action_group.title == 'optional arguments':
             action_group.title = 'Optional Arguments'
         if action_group.title == 'positional arguments':
-            action_group.title = 'Required Arguments'
+            action_group.title = 'Positional Arguments'
 
         group = {'title': action_group.title,
                  'description': action_group.description,
