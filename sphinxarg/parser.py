@@ -35,7 +35,8 @@ def _try_add_parser_attribute(data, parser, attribname):
     if not isinstance(attribval, str):
         return
     if len(attribval) > 0:
-        data[attribname] = attribval
+        # fill %(prog)s like supported by argparse
+        data[attribname] = attribval % {"prog": data.get("prog", "")}
 
 
 def _format_usage_without_prefix(parser):
